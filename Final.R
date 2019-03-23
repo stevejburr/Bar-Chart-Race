@@ -60,9 +60,9 @@ make_barchart_race <- function(data,x,y,
     scale_y_continuous("",labels=scales::comma)+
     theme(panel.grid.major.y=element_blank(),
           panel.grid.minor.x=element_blank(),
-          plot.title= element_text(size=18,colour="grey50",face="bold"),
+          plot.title= element_text(size=20,colour="grey50",face="bold"),
           plot.caption = element_text(colour="grey50"),
-          plot.subtitle = element_text(size=18,colour="grey50",face="bold"),
+          plot.subtitle = element_text(size=20,colour="grey50",face="bold"),
           plot.margin = margin(1,1,1,2,"cm"),
           axis.text.y=element_blank())+
     #this bit does the animation by year
@@ -86,7 +86,7 @@ data <- read_csv('https://gist.githubusercontent.com/johnburnmurdoch/2e5712cce1e
 make_barchart_race(data,
                    name,
                    value,
-                   title="Interbrand Top Global Brands (brand values in $)",
+                   title="Interbrand Top Global Brands\n(brand values in $)",
                    caption="Source: Interbrand")
 #save it:
 anim_save("out.gif")
